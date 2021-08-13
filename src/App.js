@@ -1,40 +1,26 @@
-import React, { Component, Fragment } from "react";
+import React, { Component } from "react";
 import "./App.css";
-import MyName from "./MyName";
+import Study01 from "./Study01";
+import MyName from "./Study02";
 import MyNameFunc from "./MyNameFunc";
+
+import Counter from "./Study04";
 
 class App extends Component {
   render() {
-    const name = "react";
-    const val = 2;
-    const style = {
-      backgrouundColor: "green",
-      padding: "16px",
-      color: "red",
-      fontSize: "36px"
-    };
     return (
-      <Fragment>
-        <div style={style}>hello~ {name}</div>
-        <div>bye~</div>
-        <div className="App">{name === "react" && <div> 벨로??</div>}</div>
-        <div>
-          {(function () {
-            if (val === 1) return <div>1이다</div>;
-            if (val === 2) return <div>2이다</div>;
-            if (val === 3) return <div>3이다</div>;
-            return <div>none</div>;
-          })()}
-        </div>
-        <div>
-          {(() => {
-            if (name === "react") return <div>dddddddd</div>;
-          })()}
-        </div>
-        <MyName name="props 테스트" />
+      <div>
+        <Counter />
+        <hr />
+        <Study01 />
+        <hr />
+        <MyName
+          myName="props 테스트" //props 부모가 자식에게 값을 전달
+        />
         <MyName />
         <MyNameFunc />
-      </Fragment>
+        <hr />
+      </div>
     );
   }
 }
