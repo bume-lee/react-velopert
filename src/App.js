@@ -1,5 +1,7 @@
 import React, { Component, Fragment } from "react";
 import "./App.css";
+import MyName from "./MyName";
+import MyNameFunc from "./MyNameFunc";
 
 class App extends Component {
   render() {
@@ -29,6 +31,9 @@ class App extends Component {
             if (name === "react") return <div>dddddddd</div>;
           })()}
         </div>
+        <MyName name="props 테스트" />
+        <MyName />
+        <MyNameFunc />
       </Fragment>
     );
   }
